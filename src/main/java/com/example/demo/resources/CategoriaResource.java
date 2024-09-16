@@ -1,8 +1,5 @@
 package com.example.demo.resources;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,11 +21,6 @@ public class CategoriaResource {
 	public ResponseEntity<Categoria> find(@PathVariable Integer id) {
 		
 			Categoria  obj = categoriaService.find(id);
-		
-		/*	
-			List<Categoria> list = new ArrayList<>();
-			list.add(cat1);
-			list.add(cat2); */
 			
 		return ResponseEntity.ok().body(obj);
 	}
